@@ -11,8 +11,8 @@ if __name__ == '__main__':
     dr = DR(verbose=False)
     print("Example 1")
     test_result1 = ["PASS", "PASS", "FAIL", "PASS"]
-    dr.reason(d_matrix, test_result1)
+    dr.process(d_matrix, test_result1)
 
     print("Example 2")
     test_result2 = ["UNKNOWN", "FAIL", "FAIL", "PASS"]
-    dr.reason(d_matrix, test_result2)
+    dr.process(d_matrix, test_result2)
