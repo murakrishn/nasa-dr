@@ -1,13 +1,22 @@
-# D-matrix solving algorithm
-# By: Murali Krishnan Rajasekharan Pillai @ Purdue University
+"""Diagnostic Reasoner (DR)
+
+Author:
+    Murali Krishnan R
+
+Date:
+    10.04.2022
+
+"""
 
 
+__all__ = ["DR"]
 
 import numpy as np
 
+
 class DR(object):
-    """
-    """
+    """"""
+
     def __init__(self, verbose=False):
         self.verbose = verbose
         self.valid_test_results = ["PASS", "FAIL", "UNKNOWN"]
