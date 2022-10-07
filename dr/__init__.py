@@ -1,4 +1,11 @@
-""""""
+"""NASA-AOS' Diagnostic Reasoner in Python
 
-from ._dr import *
+Author:
+    Murali Krishnan R
+
+Date:   
+    10.07.2022
+
+"""
+
 from .dr import *

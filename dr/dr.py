@@ -27,8 +27,6 @@ class DiagnosticReasoner:
         self.verbose = verbose
 
 
-        pass
-
     def validate_inputs(self, dmatrix: npt.NDArray, test_results: List):
         """Run validity tests for the D-matrix and `test_results`"""
 
@@ -95,7 +93,7 @@ class DiagnosticReasoner:
                 print("Failure modes after performing Step 2")
                 print(self.failure_modes)
             
-            # Check if any suspect failure modes is bad
+            # Check if any suspect failure modes is `BAD`
             for fmode_id in range(self.num_failure_modes):
                 if self.failure_modes[fmode_id] == "SUSPECT":
                     self.check_suspect_for_bad(fmode_id, test_results)
@@ -114,6 +112,7 @@ class DiagnosticReasoner:
         pass
 
     def check_suspect_for_bad(self, failure_mode_idx: int, test_results: List):
+        """Checks if the `SUSPECT` failure modes are indeed `BAD`"""
 
         for test_id in range(self.num_tests):
             if (self.dmatrix[failure_mode_idx, test_id] == 1) \
